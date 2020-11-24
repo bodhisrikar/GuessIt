@@ -58,11 +58,11 @@ class GameFragment : Fragment() {
         }
 
         gameViewModel.score.observe(viewLifecycleOwner, Observer { newScore ->
-            binding.scoreText.text = gameViewModel.score.toString()
+            binding.scoreText.text = newScore.toString()
         })
 
         gameViewModel.word.observe(viewLifecycleOwner, Observer { newWord ->
-            binding.wordText.text = gameViewModel.word.value
+            binding.wordText.text = newWord
         })
 
         return binding.root
