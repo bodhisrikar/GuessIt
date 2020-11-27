@@ -128,3 +128,10 @@ class GameViewModel: ViewModel() {
         const val COUNTDOWN_TIME = 5000L
     }
 }
+
+enum class BuzzType(val pattern: LongArray) {
+    CORRECT(CORRECT_BUZZ_PATTERN),
+    GAME_OVER(GAME_OVER_BUZZ_PATTERN),
+    COUNTDOWN_PANIC(PANIC_BUZZ_PATTERN),
+    NO_BUZZ(NO_BUZZ_PATTERN)
+}
