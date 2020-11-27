@@ -59,10 +59,6 @@ class GameFragment : Fragment() {
             }
         })
 
-        gameViewModel.currentTime.observe(viewLifecycleOwner, Observer { currentTime ->
-            binding.timerText.text = currentTime
-        })
-
         return binding.root
     }
 
